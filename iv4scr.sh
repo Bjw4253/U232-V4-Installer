@@ -40,15 +40,15 @@ clear
 echo -e "${YELLOW}|---------------------------------------------------------------------------|
 | https://github.com/Bigjoos/ 												|
 |---------------------------------------------------------------------------|
-| Licence Info: GPL 														|
+| Licence Info: GPL                                                         |
 |---------------------------------------------------------------------------|
-| Copyright (C) 2010 U-232 V4 												|
+| Copyright (C) 2010 U-232 V4                                               |
 |---------------------------------------------------------------------------|
-| A bittorrent tracker source based on TBDev.net/tbsource/bytemonsoon. 		|
+| A bittorrent tracker source based on TBDev.net/tbsource/bytemonsoon.      |
 |---------------------------------------------------------------------------|
-| Project Leaders: Mindless,putyn. 											|
+| Project Leaders: Mindless,putyn.                                          |
 |---------------------------------------------------------------------------|
-| Original Script by swizzles, modified by jonnyboy							|
+| Original Script by swizzles, modified by jonnyboy                         |
 |---------------------------------------------------------------------------|
 
 We are about to install all the basics that you require to get v4 to work.
