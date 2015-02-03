@@ -474,6 +474,10 @@ clear
 echo -e "${YELLOW}Now for xbt. We will now copy the custom server.cpp and server.h to the TRACKER folder$CLEAR"
 sleep 2
 cp -R /var/www/$IPADDY/XBT/{server.cpp,server.h,xbt_tracker.conf}  /root/xbt/Tracker/
+echo -e "${YELLOW}RIGHT - now we add your mysql connect details to xbt_tracker.conf$CLEAR"
+sed -i "s/^mysql_user.*$/mysql_user=$USERNAME/" /root/xbt/Tracker/xbt_tracker.conf
+sed -i "s/^mysql_password.*$/mysql_password=$PASS/" /root/xbt/Tracker/xbt_tracker.conf
+sed -i "s/^mysql_database.*$/mysql_database=$DBNAME/" /root/xbt/Tracker/xbt_tracker.conf
 clear
 
 echo -e "${YELLOW}Now to install the daemon. Be patient as this could take a few minutes$CLEAR"
@@ -481,11 +485,6 @@ sleep 2
 cd /root/xbt/Tracker/
 ./make.sh
 clear
-
-echo -e "${YELLOW}RIGHT - now we add your mysql connect details to xbt_tracker.conf$CLEAR"
-sed -i "s/^mysql_user.*$/mysql_user=$USERNAME/" /root/xbt/Tracker/xbt_tracker.conf
-sed -i "s/^mysql_password.*$/mysql_password=$PASS/" /root/xbt/Tracker/xbt_tracker.conf
-sed -i "s/^mysql_database.*$/mysql_database=$DBNAME/" /root/xbt/Tracker/xbt_tracker.conf
 
 cd /root/xbt/Tracker
 ./xbt_tracker
