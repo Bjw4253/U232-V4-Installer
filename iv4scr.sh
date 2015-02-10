@@ -412,6 +412,19 @@ service openntpd restart
 sleep 5
 clear
 
+echo -e "${YELLOW}Creating .my.cnf$CLEAR"
+echo "[client]
+user=$USERNAME
+password=$PASS
+
+[mysql]
+user=$USERNAME
+password=$PASS
+database=$DBNAME
+" > $USER_HOME/.my.cnf
+chmod 600 $USER_HOME/.my.cnf
+clear
+
 echo -e "${YELLOW}Now we download the Site Source:
 and do all the unzips and copy site to /var/www/$IPADDY,
 then we do the stuff like chmods etc.$CLEAR"
